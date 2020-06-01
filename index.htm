@@ -12,12 +12,12 @@
             padding: 0;
         }
         body{
-            background-color: black;    
+            background-color: rgb(0, 6, 19);    
         }
         .holderNum{
             display: flex;
             flex-direction: column; 
-            margin-top: 100px;
+            margin-top: 200px;
             align-items: center;
         }
         .increaser{
@@ -25,16 +25,19 @@
             font-size: 100px;
             align-self: center;
             text-align: center;
+            position: fixed;
         }
         button{
             width: 210px;
             height: 70px;
             font-size: 20px;
             font-family: vazir;
+            margin-top: 150px;
             outline: none;
             border: none;
             border-radius: 50px;
             background-color: rgb(32, 168, 116);
+            box-shadow: 0 0 20px  rgb(67, 141, 77);
             color: white;
             transition: 0.3s ease-in-out;
         }
@@ -43,42 +46,52 @@
             border: 2px solid rgb(32, 168, 116);
             cursor: pointer;
         }
+        #check{
+            display: none;
+        }
     </style>
 </head>
 <body>
 
         <div class="holderNum">
             <p id="randy" class="increaser"></p>
-            <button onclick="randy();">شانست رو امتحان کن</button>
+            <p id="check">true</p>
+            <button id="button" onclick="randy();">شانست رو امتحان کن</button>
         </div>
 
 
 
         <script>
-            const boolly = document.getElementById('randy').textContent;
+
             
+                function randy(){    
+                    var ip;
+                    fetch('https://api.ipify.org/?format=json')
+                    .then(results => results.json())
+                    .then(data => {
+                        ip=data.ip
+                        const check = document.getElementById('check').innerText;  
+                        if(check=="true"){
+                            const randyNumber = Math.floor(Math.random()*9999)+100;
+                            document.getElementById('randy').innerText = randyNumber;
+                            $('.increaser').each(function () {
+                                $(this).prop('Counter',0).animate({
+                                    Counter: $(this).text()
+                                }, {
+                                    duration: 100,
+                                    easing: 'swing',
+                                    step: function (now) {
+                                        $(this).text(Math.ceil(now));
+                                    }
+                                });
+                            });  
+                            document.getElementById('check').innerHTML = 123;
+                        }else{
+                            window.alert('شما شانس خود را قبلا امتحان کرده اید!'); 
+                        }
+                    });
 
-            function randy(){
-                if(boolly=="")
-                {
-                    const randyNumber = Math.floor(Math.random()*9999)+100;
-                    document.getElementById('randy').innerText = randyNumber;
-                    $('.increaser').each(function () {
-                        $(this).prop('Counter',0).animate({
-                            Counter: $(this).text()
-                        }, {
-                            duration: 100,
-                            easing: 'swing',
-                            step: function (now) {
-                                $(this).text(Math.ceil(now));
-                            }
-                        });
-                    });  
                 }
-                else
-                alert('فقط یکبار میتوانید شانس خود را امتحان کنید')
-
-            }
         </script>
 </body>
 </html>
