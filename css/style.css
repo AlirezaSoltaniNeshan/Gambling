@@ -26,15 +26,15 @@ body {
 button {
   width: 210px;
   height: 70px;
+  background-color: #20a874;
   font-size: 20px;
-  font-family: vazir;
-  margin-top: 150px;
+  font-family: "vazir";
+  color: white;
+  border-radius: 50px;
   outline: none;
   border: none;
-  border-radius: 50px;
-  background-color: #20a874;
+  margin-top: 150px;
   box-shadow: 0 0 20px #438d4d;
-  color: white;
   transition: 0.3s ease-in-out;
 }
 

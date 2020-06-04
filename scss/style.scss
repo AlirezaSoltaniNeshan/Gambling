@@ -1,3 +1,7 @@
+// Width and height of button chance 
+$widthChance: 210px;
+$heightChance: 70px;
+$buttonForeColor: white;
 *{
     font-family: dosis;
     margin: 0;
@@ -6,9 +10,23 @@
 body{
     background-color: rgb(0, 6, 19);    
 }
-.holderNum{
+// Display fixed use flex box
+@mixin displayOrder {
     display: flex;
     flex-direction: column; 
+}
+// specified fore style 
+@mixin foreStyle($btnBgColor, $fontSize, $fontFamily, $fontColor, $btnRadius) {
+    background-color: $btnBgColor;
+    font-size: $fontSize;
+    font-family: $fontFamily;
+    color: $fontColor;
+    border-radius: $btnRadius;
+    outline: none;
+    border: none;
+}
+.holderNum{
+    @include displayOrder();
     margin-top: 200px;
     align-items: center;
 }
@@ -20,17 +38,11 @@ body{
     position: fixed;
 }
 button{
-    width: 210px;
-    height: 70px;
-    font-size: 20px;
-    font-family: vazir;
+    width: $widthChance;
+    height: $heightChance;
+    @include foreStyle(rgb(32, 168, 116), 20px, 'vazir', $buttonForeColor, 50px);
     margin-top: 150px;
-    outline: none;
-    border: none;
-    border-radius: 50px;
-    background-color: rgb(32, 168, 116);
     box-shadow: 0 0 20px  rgb(67, 141, 77);
-    color: white;
     transition: 0.3s ease-in-out;
 }
 button:hover{
