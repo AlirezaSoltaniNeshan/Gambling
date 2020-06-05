@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #000613;
+  background-color: #eeeeee;
 }
 
 .holderNum {
@@ -16,7 +16,7 @@ body {
 }
 
 .increaser {
-  color: white;
+  color: #000;
   font-size: 100px;
   align-self: center;
   text-align: center;
@@ -34,17 +34,24 @@ button {
   outline: none;
   border: none;
   margin-top: 150px;
-  box-shadow: 0 0 20px #438d4d;
+  box-shadow: 0 0 0px #438d4d;
   transition: 0.3s ease-in-out;
 }
 
 button:hover {
   background-color: transparent;
-  border: 2px solid #20a874;
+  border: 1px solid #20a874;
   cursor: pointer;
+  color: black;
+  box-shadow: 0 0 20px #438d4d;
 }
 
 #check {
   display: none;
+}
+
+#pResult {
+  font-family: "vazir";
+  margin-top: 40px;
 }
 /*# sourceMappingURL=style.css.map */
