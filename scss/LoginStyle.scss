@@ -1,0 +1,66 @@
+$primary-color: #FFD928;
+
+@mixin bodyDisplayCol {
+    display: flex;
+    flex-direction: column;
+}
+@mixin bodyDisplayRow {
+    display: flex;
+    flex-direction: row;
+}
+@font-face{
+    font-family: vazir;
+    src: url('assets/font/Vazir.ttf');
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: vazir;
+}
+body{
+    background-color: $primary-color;
+    @include bodyDisplayCol();
+}
+.section-a .container{
+    @include bodyDisplayCol();
+    align-self: center;
+    align-items: center;
+    margin: 100px;
+}
+.section-a .container .polikoo{
+    width: 60px;
+}
+.section-a .container .circular{
+    width: 200px;
+    height: 150px;
+    background-color: $primary-color;
+    @include bodyDisplayCol();
+    align-items: center;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    z-index: 1;
+}
+.section-b{
+    align-self: center;
+    align-items: center;
+    margin-top: -150px;
+}
+.section-b .container{
+    @include bodyDisplayCol();
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    align-self: center;
+    align-items: center;
+    box-shadow: 0 0 5px rgb(133, 133, 133);
+
+}
+
+@media screen and (max-width: 650px){
+    .section-b .container{
+        width: 300px;
+        height: 400px;
+    
+    }
+}
