@@ -1,3 +1,8 @@
+@font-face {
+  font-family: vazir;
+  src: url("Vazir.ttf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -93,6 +98,8 @@ a {
 .decoholder {
   border-right: 2px solid #9F9F9F;
   position: relative;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .full {
@@ -109,6 +116,27 @@ a {
   100% {
     opacity: 1;
   }
+}
+
+.rule {
+  width: 150px;
+  height: 38px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: #FFD928;
+  font-size: 20px;
+  border: 2px solid #FFD928;
+  text-align: center;
+  transition: 0.2s ease-in-out;
+  margin-top: 20px;
+  align-self: flex-end;
+}
+
+.rule:hover {
+  background-color: transparent;
+  border: 2px solid #FFD928;
+  cursor: pointer;
 }
 
 .mainPol {

@@ -17,6 +17,10 @@ $btn-font-size: 20px;
     display: flex;
     flex-direction: column-reverse;
 }
+@font-face{
+    font-family: vazir;
+    src: url('Vazir.ttf');
+}
 *{
     margin: 0;
     padding: 0;
@@ -95,6 +99,7 @@ a{
   .decoholder{
     border-right: 2px solid $font-color-forward;
     position: relative;
+    @include setDisplayCol();
 }
   .full{
     height: 100%;
@@ -110,7 +115,25 @@ a{
     opacity: 1;
     }
   }
-  
+  .rule{
+    width: 150px;
+    height: 38px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: $primary-color;
+    font-size: $btn-font-size;
+    border: 2px solid $primary-color;
+    text-align: center;
+    transition: 0.2s ease-in-out;
+    &:hover{
+        background-color: transparent;
+        border: 2px solid $primary-color;
+        cursor: pointer;
+    }
+    margin-top: 20px;
+    align-self: flex-end;
+  }
   .mainPol{
     width: 400px;    
   }
