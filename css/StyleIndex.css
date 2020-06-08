@@ -39,15 +39,11 @@ a {
 
 .navbar .container ul li {
   margin-left: 40px;
-}
-.navbar .container ul li a{
   color: #9F9F9F;
-}
-.navbar .container ul li a:hover{
-  color: black;
 }
 
 .navbar .container ul li:hover {
+  color: black;
   cursor: pointer;
 }
 
@@ -153,7 +149,6 @@ a {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 50px;
   margin: 40px 80px;
-  /* background-color: red; */
 }
 
 .section-b .container h4 {
@@ -279,7 +274,7 @@ a {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 550px) {
   .section-d {
     margin-right: 50px;
     margin-left: 50px;
