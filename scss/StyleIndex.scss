@@ -60,6 +60,7 @@ a{
     height: 38px;
     border: none;
     outline: none;
+    color: #000;
     border-radius: 5px;
     background-color: $primary-color;
     font-size: $btn-font-size;
@@ -152,12 +153,13 @@ a{
     text-align: justify;
     color: $font-color-forward;
 }
-
+.section-c{
+    border-bottom: 0.5px solid $font-color-forward;
+}
 .section-c .container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin: 100px 40px;
-
+    margin: 70px 80px;
 }
 
 .section-c .container h1{
@@ -178,7 +180,9 @@ a{
     margin-left: 50px;
     margin-bottom: 50px;
 }
-
+.section-d{
+    margin-top: 50px;
+}
 .section-d .container{
     @include mainDisplayCol();
     align-items: center;
@@ -245,9 +249,10 @@ a{
     }
 }
    @media screen and (max-width: 400px){
-       .section-a {
-           height: 800px;
-         }
+         .section-d{
+            margin-right: 50px;
+            margin-left: 50px;
+        }
    }
   @media screen and (max-width: 600px){
     .navbar .container{
