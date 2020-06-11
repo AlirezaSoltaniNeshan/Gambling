@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قرعه کشی پولی کو</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <link rel="stylesheet" href="css/gMode.css">
+</head>
+<body>
+        <!-- navbar -->
+        <nav class="navbar">
+            <div class="container">
+                <a class="logout" href="LoginScreen.htm">خروج</a>
+                    <div class="prof">
+                        <img src="assets/img/PolikooLogo.png" class="logo" alt="PolikooLogo">
+                        <div class="proDetail">
+                            <p>Alireza.codes</p>
+                            <p class="ipShow">2.172.172.248</p>
+                        </div>
+                    </div>
+            </div>
+        </nav>
+    
+        <section class="section-a">
+            <div class="container">
+                <h2>:عدد تصادفی شما</h2>
+                <h3 class="ipRand">26</h3>
+                <h4>جمع ارقام آی پی شما : 44</h4>
+            </div>
+        </section>
+
+        <section class="section-b">
+            <div class="container">
+                <div class="loginUsers">
+                    <div class="updateUserIncoming">بروزرسانی</div>
+                    <div class="users">
+                        <p>Alireza.codes</p>
+                        <p>26</p>
+                    </div>
+                    <div class="users">
+                        <p>Donya.er</p>
+                        <p>46</p>
+                    </div>
+                    <div class="users">
+                        <p>bbrt</p>
+                        <p>20</p>
+                    </div>
+                    <div class="users">
+                        <p>tony</p>
+                        <p>58</p>
+                    </div>
+                    <div class="users">
+                        <p>Robert</p>
+                        <p>59</p>
+                    </div>
+                    <div class="users">
+                        <p>Alireza.codes</p>
+                        <p>26</p>
+                    </div>
+                    <div class="users">
+                        <p>Donya.er</p>
+                        <p>46</p>
+                    </div>
+                    <div class="users">
+                        <p>bbrt</p>
+                        <p>20</p>
+                    </div>
+                    <div class="users">
+                        <p>tony</p>
+                        <p>58</p>
+                    </div>
+                    <div class="users">
+                        <p>Robert</p>
+                        <p>59</p>
+                    </div>
+                </div>
+                <div class="winner">
+                    <div class="updateWinnerIncoming">بروزرسانی برندکان</div>
+                    <div class="users">
+                        <p>Alireza.codes</p>
+                        <p>26</p>
+                    </div>
+                    <div class="users">
+                        <p>Alireza.codes</p>
+                        <p>26</p>
+                    </div>
+                    <div class="users">
+                        <p>Alireza.codes</p>
+                        <p>26</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            $('.ipRand').each(function () {
+                $(this).prop('Counter',0).animate({
+                   Counter: $(this).text(),
+                }, {
+                   duration: 5000,
+                   easing: 'swing',
+                   step: function (now) {
+                       $(this).text(Math.ceil(now));
+                   }
+                })
+             }); 
+        </script>
+</body>
+</html>
