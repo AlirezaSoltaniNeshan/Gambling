@@ -39,7 +39,14 @@ a {
 
 .navbar .container ul li {
   margin-left: 40px;
+}
+
+.navbar .container ul li a {
   color: #9F9F9F;
+}
+
+.navbar .container ul li a:hover {
+  color: black;
 }
 
 .navbar .container ul li:hover {
@@ -363,4 +370,4 @@ a {
     margin-bottom: 15px;
   }
 }
-/*# sourceMappingURL=StyleIndex.css.map */
+/*# sourceMappingURL=styleIndex.css.map */

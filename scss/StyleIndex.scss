@@ -49,7 +49,12 @@ a{
 }
 .navbar .container ul li{
     margin-left: 40px;
+}
+.navbar .container ul li a{
     color: $font-color-forward;
+}
+.navbar .container ul li a:hover{
+    color: black;
 }
 .navbar .container ul li:hover{
     color: black;
@@ -335,4 +340,3 @@ a{
         margin-bottom: 15px;
     }
 }  
-

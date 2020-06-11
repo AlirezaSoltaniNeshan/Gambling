@@ -21,22 +21,37 @@
         <div class="container">
             <div class="nestedForm">
                 <div class="username">
-                    <input placeholder="نام کاربری" type="text" class="usr">
+                    <input placeholder="نام کاربری" type="text" class="usr" id="usr">
                     <img src="assets/img/user.png" class="usrIcon" alt="usernameIcon">
                 </div>
                 <div class="password">
-                    <input placeholder="گذرواژه" type="password" class="pass">
+                    <input placeholder="گذرواژه" type="password" class="pass" id="pass">
                     <img src="assets/img/password.png" class="usrIcon" alt="passwordIcon">
                 </div>
 
                 <div class="form">
-                    <a href="LoginScreen.htm" class="loginSecond">ورود</a>
+                    <a href="LoginScreen.htm" class="loginSecond" onclick="login();">ورود</a>
                     <a href="signup.htm" class="signUp">ثبت نام</a>
                 </div>
             </div>
         </div>
     </section>
 
+    <script>
+        //src="https://unpkg.com/axios/dist/axios.min.js"
+    /*//http://535916be4dac.ngrok.io/
+    const user = document.getElementById('usr').innerText;
+    const pass = document.getElementById('pass').innerText;
+    const polikooAPI = 'http://535916be4dac.ngrok.io/';
+    axios.post(polikooAPI, );*/
+
+    /*function login(){
+        const user = document.getElementById('usr').value;
+        const pass = document.getElementById('pass').value;
+        window.alert(user+pass);
+    }*/
+
+    </script>
     
 </body>
 </html>
